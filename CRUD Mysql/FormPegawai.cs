@@ -1,0 +1,73 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CRUD_Mysql
+{
+    public partial class FormPegawai : Form
+    {
+        private readonly Pegawai _parent;
+        public string id_pegawai, nama, alamat, no_telp;
+        public DateTime tanggal_lahir;
+
+        public FormPegawai(Pegawai parent)
+        {
+            InitializeComponent();
+            _parent = parent;
+        }
+
+        private void FormPegawai_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void FormPegawai_Shown(object sender, EventArgs e)
+        {
+            UpdateInfo();
+        }
+
+        public void UpdateInfo()
+        {
+            judulForm.Text = "Update Data Pegawai";
+            btnCreateKat.Text = "Update";
+            txtNama.Text = nama;
+            txtAlamat.Text = alamat;
+            tanggalLahir.Value = tanggal_lahir;
+            txtNoTelp.Text = no_telp;
+        }
+        private void btnCreateKat_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtNama.Text) || string.IsNullOrEmpty(txtAlamat.Text) || string.IsNullOrEmpty(txtNoTelp.Text))
+            {
+                MessageBox.Show("Isi semua kolom dengan benar!");
+                return;
+            }
+
+            if (btnCreateKat.Text == "Simpan")
+            {
+                PegawaiPerp std = new PegawaiPerp(txtNama.Text.Trim(), txtAlamat.Text.Trim(), tanggalLahir.Value, txtNoTelp.Text);
+                MessageBox.Show("No. Telepon : " + txtNoTelp.Text);
+                DbPerpustakaan.AddPegawai(std);
+                Clear();
+            }
+            if (btnCreateKat.Text == "Update")
+            {
+                PegawaiPerp std = new PegawaiPerp(txtNama.Text.Trim(), txtAlamat.Text.Trim(), tanggalLahir.Value, txtNoTelp.Text);
+                MessageBox.Show("No. Telepon : " + txtNoTelp.Text);
+                DbPerpustakaan.UpdatePegawai(std, id_pegawai);
+            }
+            _parent.Display();
+        }
+
+        public void Clear()
+        {
+            txtNama.Text = txtAlamat.Text = tanggalLahir.Text = txtNoTelp.Text = string.Empty;
+        }
+    }
+}
