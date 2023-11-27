@@ -29,7 +29,13 @@ namespace CRUD_Mysql
 
         private void FormPegawai_Shown(object sender, EventArgs e)
         {
-            UpdateInfo();
+            if(judulForm.Text == "Update Data Pegawai")
+            {
+                tanggalLahir.Value = tanggal_lahir;
+            } else
+            {
+                return;
+            }
         }
 
         public void UpdateInfo()
@@ -38,7 +44,6 @@ namespace CRUD_Mysql
             btnCreateKat.Text = "Update";
             txtNama.Text = nama;
             txtAlamat.Text = alamat;
-            tanggalLahir.Value = tanggal_lahir;
             txtNoTelp.Text = no_telp;
         }
         private void btnCreateKat_Click(object sender, EventArgs e)
@@ -52,14 +57,12 @@ namespace CRUD_Mysql
             if (btnCreateKat.Text == "Simpan")
             {
                 PegawaiPerp std = new PegawaiPerp(txtNama.Text.Trim(), txtAlamat.Text.Trim(), tanggalLahir.Value, txtNoTelp.Text);
-                MessageBox.Show("No. Telepon : " + txtNoTelp.Text);
                 DbPerpustakaan.AddPegawai(std);
                 Clear();
             }
             if (btnCreateKat.Text == "Update")
             {
                 PegawaiPerp std = new PegawaiPerp(txtNama.Text.Trim(), txtAlamat.Text.Trim(), tanggalLahir.Value, txtNoTelp.Text);
-                MessageBox.Show("No. Telepon : " + txtNoTelp.Text);
                 DbPerpustakaan.UpdatePegawai(std, id_pegawai);
             }
             _parent.Display();
@@ -68,6 +71,8 @@ namespace CRUD_Mysql
         public void Clear()
         {
             txtNama.Text = txtAlamat.Text = tanggalLahir.Text = txtNoTelp.Text = string.Empty;
+            judulForm.Text = "Tambah Data Pegawai";
+            btnCreateKat.Text = "Simpan";
         }
     }
 }

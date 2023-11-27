@@ -59,6 +59,8 @@ namespace CRUD_Mysql
                 form.id_kategori = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 form.nama_kategori = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 form.nama_penanggung_jawab = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+                form.UpdateInfo();
                 form.ShowDialog();
                 return;
             }
@@ -72,6 +74,13 @@ namespace CRUD_Mysql
                 }
                 return;
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomePage homepage = new HomePage();
+            homepage.ShowDialog();
         }
     }
 }

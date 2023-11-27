@@ -12,6 +12,7 @@ namespace CRUD_Mysql
 {
     public partial class Pegawai : Form
     {
+
         FormPegawai form;
         public Pegawai()
         {
@@ -37,7 +38,8 @@ namespace CRUD_Mysql
         private void newKatBuku_Click(object sender, EventArgs e)
         {
             form.Clear();
-            form.Show();
+            form.ShowDialog();
+            
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -69,6 +71,8 @@ namespace CRUD_Mysql
                 }*/
 
                 form.no_telp = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+
+                form.UpdateInfo();
                 form.ShowDialog();
                 return;
             }

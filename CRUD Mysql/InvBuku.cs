@@ -60,6 +60,8 @@ namespace CRUD_Mysql
                 form.penulis = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                 form.penerbit = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
                 form.tahun_terbit = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+
+                form.UpdateInfo();
                 form.ShowDialog();
                 return;
             }

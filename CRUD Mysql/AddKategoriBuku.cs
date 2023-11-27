@@ -30,11 +30,7 @@ namespace CRUD_Mysql
         private void AddKategoriBuku_Load(object sender, EventArgs e)
         {
             DbPerpustakaan.LoadComboBox("SELECT * FROM pegawai", "pegawai", "nama", cmbPenanggungJawab);
-            UpdateInfo();
-
-            int itemCount = cmbPenanggungJawab.Items.Count;
-            MessageBox.Show("Jumlah item dalam ComboBox: " + itemCount.ToString());
-
+            cmbPenanggungJawab.Text = nama_penanggung_jawab;
         }
 
         public void UpdateInfo()
@@ -42,7 +38,6 @@ namespace CRUD_Mysql
             judulForm.Text = "Update Kategori";
             btnCreateKat.Text = "Update";
             txtNamaKat.Text = nama_kategori;
-            cmbPenanggungJawab.Text = nama_penanggung_jawab;
         }
 
         private void AddKategoriBuku_Shown(object sender, EventArgs e)
@@ -52,6 +47,9 @@ namespace CRUD_Mysql
         public void Clear()
         {
             txtNamaKat.Text = string.Empty;
+            judulForm.Text = "Tambah Kategori Buku";
+            btnCreateKat.Text = "Simpan";
+            cmbPenanggungJawab.Text = "";
         }
 
         private void btnCreateKat_Click(object sender, EventArgs e)

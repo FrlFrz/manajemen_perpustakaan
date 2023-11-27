@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KategoriBuku));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -44,19 +45,20 @@
             this.Column7 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.newKatBuku = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.newKatBuku = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Cyan;
+            this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -64,6 +66,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1019, 160);
             this.panel1.TabIndex = 9;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(822, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(148, 155);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // label3
             // 
@@ -126,8 +139,8 @@
             // Column1
             // 
             this.Column1.DataPropertyName = "id_kategori";
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle6;
             this.Column1.HeaderText = "#";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -135,9 +148,9 @@
             // Column3
             // 
             this.Column3.DataPropertyName = "nama_kategori";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle7;
             this.Column3.HeaderText = "Kategori";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -145,21 +158,21 @@
             // Column6
             // 
             this.Column6.DataPropertyName = "nama_penanggung_jawab";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle8;
             this.Column6.HeaderText = "Penanggung Jawab";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Green;
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Green;
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle9;
             this.Column7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Column7.HeaderText = "";
             this.Column7.Name = "Column7";
@@ -169,13 +182,13 @@
             // 
             // Column8
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Aqua;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Aqua;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.Column8.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Aqua;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Aqua;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle10;
             this.Column8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Column8.HeaderText = "";
             this.Column8.Name = "Column8";
@@ -194,6 +207,19 @@
             this.txtSearch.TabIndex = 1;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(622, 31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // newKatBuku
             // 
             this.newKatBuku.BackColor = System.Drawing.Color.Aqua;
@@ -210,29 +236,15 @@
             this.newKatBuku.UseVisualStyleBackColor = false;
             this.newKatBuku.Click += new System.EventHandler(this.newKatBuku_Click);
             // 
-            // pictureBox1
+            // btnBack
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(622, 31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(822, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(148, 155);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // KategoriBuku
             // 
@@ -248,11 +260,11 @@
             this.Shown += new System.EventHandler(this.KategoriBuku_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -272,5 +284,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewButtonColumn Column7;
         private System.Windows.Forms.DataGridViewButtonColumn Column8;
+        private System.Windows.Forms.Button btnBack;
     }
 }

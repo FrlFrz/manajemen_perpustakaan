@@ -33,7 +33,14 @@ namespace CRUD_Mysql
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Apakah Anda yakin ingin melanjutkan?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if(result == DialogResult.Yes)
+            {
+                this.Close();
+                Info login = new Info();
+                login.ShowDialog();
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

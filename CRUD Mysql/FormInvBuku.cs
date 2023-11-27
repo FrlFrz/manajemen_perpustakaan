@@ -25,7 +25,6 @@ namespace CRUD_Mysql
             judulForm.Text = "Update Data Buku";
             btnCreateKat.Text = "Update";
             txtJudulBuku.Text = judul_buku;
-            cmbKategoriBuku.Text = kategori_buku;
             txtPenulis.Text = penulis;
             txtPenerbit.Text = penerbit;
             txtTahunTerbit.Text = tahun_terbit;
@@ -33,12 +32,15 @@ namespace CRUD_Mysql
         private void FormInvBuku_Load(object sender, EventArgs e)
         {
             DbPerpustakaan.LoadComboBox("SELECT * FROM kategori_buku", "kategori_buku", "nama_kategori", cmbKategoriBuku);
-            UpdateInfo();
+            cmbKategoriBuku.Text = kategori_buku;
         }
 
         public void Clear()
         {
             txtJudulBuku.Text = cmbKategoriBuku.Text = txtPenulis.Text = txtPenerbit.Text = txtTahunTerbit.Text = string.Empty;
+            judulForm.Text = "Tambah Data Buku";
+            btnCreateKat.Text = "Simpan";
+            cmbKategoriBuku.Text = "";
         }
 
         private void btnCreateKat_Click(object sender, EventArgs e)
