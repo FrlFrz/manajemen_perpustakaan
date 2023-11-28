@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD Mysql", "CRUD Mysql\CRUD Mysql.csproj", "{791F95F2-580B-4680-B30F-AD29C36BB296}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manajemen Perpustakaan", "CRUD Mysql\Manajemen Perpustakaan.csproj", "{791F95F2-580B-4680-B30F-AD29C36BB296}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

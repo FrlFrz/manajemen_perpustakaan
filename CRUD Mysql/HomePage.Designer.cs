@@ -79,11 +79,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(226, 84);
+            this.label3.Location = new System.Drawing.Point(204, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(304, 31);
+            this.label3.Size = new System.Drawing.Size(367, 31);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Perpustakaan Blok Fruti";
+            this.label3.Text = "Perpustakaan Mulya Kusuma";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // kategoriBuku
             // 
@@ -143,7 +144,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackColor = System.Drawing.Color.Cyan;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";

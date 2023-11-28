@@ -73,5 +73,10 @@ namespace CRUD_Mysql
             InvBuku invbuku = new InvBuku();
             invbuku.ShowDialog();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
