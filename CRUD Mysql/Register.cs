@@ -60,7 +60,7 @@ namespace CRUD_Mysql
 
                 if(!(userExist || emailExist))
                 {
-                    string insert = "INSERT INTO manajemen_perpustakaan.user (id, username, email, no_telp, password) VALUES (NULL, '" + regUsername.Text + "', '"+ regEmail.Text + "', '"+ regNoTelp.Text + "', '"+ regPass.Text +"')";
+                    string insert = "INSERT INTO manajemen_perpustakaan.user (id, username, email, no_telp, password) VALUES (NULL, '" + regUsername.Text + "', '"+ regEmail.Text + "', '"+ regNoTelp.Text + "', SHA2('"+ regPass.Text +"', 256))";
 
                     MySqlCommand insertData = new MySqlCommand(insert, conn);
                     insertData.CommandTimeout = 60;

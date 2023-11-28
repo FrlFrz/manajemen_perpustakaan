@@ -52,7 +52,7 @@ namespace CRUD_Mysql
                 {
                     conn.Open();
 
-                    string selectQuery = "SELECT * FROM manajemen_perpustakaan.user WHERE Username = @Username AND Password = @Password";
+                    string selectQuery = "SELECT * FROM manajemen_perpustakaan.user WHERE Username = @Username AND Password = SHA2(@Password, 256)";
                     using (MySqlCommand selectCmd = new MySqlCommand(selectQuery, conn))
                     {
                         selectCmd.Parameters.AddWithValue("@Username", inputUsername.Text);
