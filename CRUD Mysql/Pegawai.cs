@@ -81,7 +81,7 @@ namespace CRUD_Mysql
                 // Delete
                 if (MessageBox.Show("Apakah anda yakin ingin menghapus data ini?", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    DbPerpustakaan.DeleteKategori(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    DbPerpustakaan.DeletePegawai(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
                     Display();
                 }
                 return;
